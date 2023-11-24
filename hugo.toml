@@ -1,6 +1,6 @@
 baseURL = 'http://poganatz.ca/'
 languageCode = 'en-us'
-title = "Alexander Poganatz's Website"
+title = "Alexander's Website"
 theme = "hugo-coder"
 defaultContentLangauge = "en-us"
 
@@ -35,6 +35,12 @@ style = 'github-dark'
 	icon = "fa fa-github fa-2x"
 	weight = 1
 	url = "https://github.com/Alexander-Poganatz"
+
+[[params.social]]
+	name = "Linkedin"
+	icon = "fa fa-linkedin fa-2x"
+	weight = 1
+	url = "https://www.linkedin.com/in/alexander-poganatz-653924107/"
 
 [[params.social]]
 	name = "Email"
