@@ -1,0 +1,23 @@
+baseURL = 'http://poganatz.ca/'
+languageCode = 'en-us'
+title = "Alexander Poganatz's Website"
+theme = "hugo-coder"
+defaultContentLangauge = "en-us"
+
+paginate = 20
+
+[markup.highlight]
+style = 'github-dark'
+
+[params]
+	author = "Alexander Poganatz"
+	info = "Software Developer"
+	keywords = 'blog,developer,personal'
+	avatarurl = "images/avatar.jpg"
+
+	# a bunch of favicons
+	since = 2017
+	colorScheme = "auto"
+	hideColorSchemeToggle = "false"
+	
+
