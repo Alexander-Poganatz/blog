@@ -19,5 +19,26 @@ style = 'github-dark'
 	since = 2017
 	colorScheme = "auto"
 	hideColorSchemeToggle = "false"
-	
+
+[[menu.main]]
+	name = "Blog"
+	weight = 1
+	url = "posts/"
+
+[[menu.main]]
+	name = "About"
+	weight = 2
+	url = "about"
+
+[[params.social]]
+	name = "Github"
+	icon = "fa fa-github fa-2x"
+	weight = 1
+	url = "https://github.com/Alexander-Poganatz"
+
+[[params.social]]
+	name = "Email"
+	icon = "fa fa-envelope fa-2x"
+	weight = 1
+	url = "mailto:a_poganatz@outlook.com"
 
