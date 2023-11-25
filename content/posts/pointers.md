@@ -99,4 +99,4 @@ int const * const constantPointerToConstantValue;
 
 A simple trick to read pointer type declaration is to read it right to left. The above code would then easily be read as a constant pointer to a constant int.
 
-
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)

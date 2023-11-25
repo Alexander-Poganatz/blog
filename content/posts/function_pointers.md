@@ -34,3 +34,4 @@ std::cout << fPtr(2, 4) << std::endl;
 } 
 ```
 
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)

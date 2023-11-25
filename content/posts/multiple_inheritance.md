@@ -96,3 +96,4 @@ Reinterpret casts do not check object types so only use them if you know what yo
 
 Stuff by Alexander Poganatz. Information may be incorrect
 
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)

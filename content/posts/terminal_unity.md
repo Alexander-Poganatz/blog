@@ -44,3 +44,4 @@ UTF-8 continuation characters would be greater than 127 and less than 192.
 
 Last updated 2018-05-22
 
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)

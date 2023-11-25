@@ -77,3 +77,4 @@ Simple themes are basic and the site is a tad less colorful, but I can't get eve
 This is basically a blog post so I have new content to justify replacing version 2 of my site.
 Now that I have site organization and page linking as something I don't have to worry so much about, I might pump out more blog posts.
 
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)

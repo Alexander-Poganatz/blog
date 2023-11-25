@@ -94,3 +94,4 @@ Pruning is an interesting topic to me. When I implemented delete functionality o
 
 Since my project was done I did not make the change since I may have to update my iterator routines to handle dead branches.
 
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)

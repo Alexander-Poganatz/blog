@@ -47,3 +47,5 @@ After the term ended, I did one last update which was to support IPV6. It wasn't
 If I were to do this project again I would try to use the State design pattern to handle changing the state of the game. I used if statements and Boolean flags to handle changes in state but it is not very flexible.
 [A very nice read on the topic of the State pattern in games.](https://gameprogrammingpatterns.com/state.html)
 
+This blog post is licensed under [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)
+
