@@ -177,7 +177,7 @@ function addMenuItem() {
 }
 
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('./serviceWorker.js')
+    navigator.serviceWorker.register('/checklist/serviceWorker.js')
         .then(registration => {
         }).catch(console.error)
 }
