@@ -2,9 +2,9 @@
   "short_name": "Checklist",
   "name": "Checklist App",
   "icons": [
-    { "src": "./icon.svg", "type": "image/svg+xml", "sizes": "192x192" },
-    { "src": "./icon.svg", "type": "image/svg+xml", "sizes": "32x32" },
-    { "src": "./icon.svg", "type": "image/svg+xml", "sizes": "512x512" }
+    { "src": "/checklist/icon.svg", "type": "image/svg+xml", "sizes": "192x192" },
+    { "src": "/checklist/icon.svg", "type": "image/svg+xml", "sizes": "32x32" },
+    { "src": "/checklist/icon.svg", "type": "image/svg+xml", "sizes": "512x512" }
   ],
   "start_url": "/checklist",
   "display": "standalone",
