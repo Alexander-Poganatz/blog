@@ -1,0 +1,13 @@
+{
+  "short_name": "Checklist",
+  "name": "Checklist App",
+  "icons": [
+    { "src": "./icon.svg", "type": "image/svg+xml", "sizes": "192x192" },
+    { "src": "./icon.svg", "type": "image/svg+xml", "sizes": "32x32" },
+    { "src": "./icon.svg", "type": "image/svg+xml", "sizes": "512x512" }
+  ],
+  "start_url": "/checklist",
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "gray"
+}

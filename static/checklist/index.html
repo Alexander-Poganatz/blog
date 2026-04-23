@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" sizes="32x32" />
+    <link rel="apple-touch-icon" type="image/svg+xml" href="./icon.svg" sizes="96x96" />
+    <title>Checklist App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="./manifest.json" />    
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <div id="menu-area" class="container">
+        <h1>Checklist App</h1>
+        <div class="input-area">
+            <input type="text" id="menuInput" placeholder="Enter a new checklist name...">
+            <button id="addChecklistBtn" class="add-btn">Add</button>
+        </div>
+        <ul id="menuList">
+            <!-- List items will be added here by JavaScript -->
+        </ul>
+    </div>
+    <div id="checklist-area" class="container d-none">
+        <h1 id="checklistHeader">My Checklist</h1>
+        <div class="header-actions">
+            <button id="removeItemAllBtn" class="delete-btn">Remove all checked items</button>
+            <button id="backToMenuBtn">Back</button>
+        </div>
+        <div class="input-area">
+            <input type="text" id="itemInput" placeholder="Enter a new item...">
+            <button id="addItemBtn" class="add-btn">Add</button>
+        </div>
+        <ul id="checklist">
+            <!-- List items will be added here by JavaScript -->
+        </ul>
+    </div>
+</body>
+</html>

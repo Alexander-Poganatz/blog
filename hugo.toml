@@ -6,6 +6,8 @@ defaultContentLangauge = "en-us"
 
 paginate = 20
 
+ignoreLogs = ['warning-goldmark-raw-html']
+
 [markup.highlight]
 style = 'github-dark'
 
@@ -46,5 +48,5 @@ style = 'github-dark'
 	name = "Email"
 	icon = "fa fa-envelope fa-2x"
 	weight = 1
-	url = "mailto:a_poganatz@outlook.com"
+	url = "mailto:alex.poga@outlook.com"
 
