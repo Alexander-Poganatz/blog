@@ -6,6 +6,8 @@ defaultContentLangauge = "en-us"
 
 paginate = 20
 
+ignoreLogs = ['warning-goldmark-raw-html']
+
 [markup.highlight]
 style = 'github-dark'
 
