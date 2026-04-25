@@ -1,7 +1,7 @@
 let gChecklist = null
 
 function saveChecklistInDB(checklistObj) {
-    if (navigator.serviceWorker){
+    if (navigator.serviceWorker.controller){
         navigator.serviceWorker.controller.postMessage(checklistObj)
     }
     else {
