@@ -1,4 +1,25 @@
 let gChecklist = null
+
+function saveChecklistInDB(checklistObj) {
+    if (navigator.serviceWorker){
+        navigator.serviceWorker.controller.postMessage(checklistObj)
+    }
+    else {
+        const func = function(store) {
+            store.put(checklistObj)
+        }
+        openAndProcessDBFunc(func)
+    }
+}
+
+function deleteChecklistInDB(id) {
+    id = Number.parseInt(id)
+    function deleteFunc(store) {
+        store.delete(id)
+    }
+    openAndProcessDBFunc(deleteFunc)
+}
+
 // Create Checklist, add it to session storage, and return it
 function createChecklist(name) {
     const id = Date.now()
@@ -7,8 +28,7 @@ function createChecklist(name) {
         name: name,
         list: []
     }
-    const strObj = JSON.stringify(obj)
-    localStorage.setItem(id.toString(), strObj)
+    saveChecklistInDB(obj)
     return obj
 }
 
@@ -22,12 +42,18 @@ const checklistArea = document.getElementById('checklist-area')
 const checklistHeader = document.getElementById('checklistHeader')
 const backToMenuBtn = document.getElementById('backToMenuBtn')
 function populateMenu(){
-    for (const keyVal of Object.entries(localStorage)) {
-        const obj = JSON.parse(keyVal[1])
-        addMenuItemHTML(obj)
+    function func(store) {
+        const query = store.getAll()
+        query.onsuccess = function() {
+            for (const obj of query.result) {
+                addMenuItemHTML(obj)
+            }
+        }
     }
+    openAndProcessDBFunc(func)
 }
 
+/**Reads the checklist DOM and saves it*/
 function saveChecklist() {
     let eleList = checklist.querySelectorAll("li")
     const l = []
@@ -37,7 +63,7 @@ function saveChecklist() {
         l.push({ name: name, checked: checked })
     }
     gChecklist.list = l
-    localStorage.setItem(gChecklist.id, JSON.stringify(gChecklist))
+    saveChecklistInDB(gChecklist)
 }
 
 document.addEventListener("visibilitychange", function(event){
@@ -136,23 +162,27 @@ function addMenuItemHTML(checklistObj) {
 
     // Delete checklist on double click
     btn.addEventListener('dblclick', function(event) {
-        localStorage.removeItem(event.target.parentElement.id)
+        deleteChecklistInDB(event.target.parentElement.id)
         menuList.removeChild(event.target.parentElement)
     });
 
     // Function to open checklist
     itemTextSpan.addEventListener('click', function(event){
-        const id = event.target.parentElement.id
-        gChecklist = JSON.parse(localStorage.getItem(id))
-
-        checklistHeader.replaceChild(
-            document.createTextNode(gChecklist.name),
-            checklistHeader.firstChild)
-        renderChecklist()
-        menuArea.classList.add("d-none")
-        checklistArea.classList.remove("d-none")
+        const id = Number.parseInt(event.target.parentElement.id)
+        const func = function(store) {    
+            const query = store.get(id)
+            query.onsuccess = function() {
+                gChecklist = query.result
+                checklistHeader.replaceChild(
+                    document.createTextNode(gChecklist.name),
+                    checklistHeader.firstChild)
+                renderChecklist()
+                menuArea.classList.add("d-none")
+                checklistArea.classList.remove("d-none")                
+            }
+        }
+        openAndProcessDBFunc(func)
     });
-    
 }
 
 // Function to add a new checklist
