@@ -19,3 +19,12 @@ I added a menu of checklists and offline functionality. The tiny model was a bit
 checklists when there was already checklist.
 
 [Checklist App](/checklist)
+
+### Usage notes
+* Press enter to add items
+* Double click the delete button to delete a checklist
+
+### Development Notes
+I had to move from localStorage to indexedDB so it can work in offline mode.
+If I want to save when the user navigates away, I had to make the serviceWorker handle it
+since indexedDB operations are asynchronous and the visibilitychange event will not wait for it.
