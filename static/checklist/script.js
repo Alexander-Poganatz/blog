@@ -13,11 +13,9 @@ function createChecklist(name) {
 }
 
 const itemInput = document.getElementById('itemInput');
-const addItemBtn = document.getElementById('addItemBtn');
 const checklist = document.getElementById('checklist');
 const removeItemAllBtn = document.getElementById('removeItemAllBtn');
 const menuTextInput = document.getElementById('menuInput')
-const addChecklistBtn = document.getElementById('addChecklistBtn')
 const menuList = document.getElementById('menuList')
 const menuArea = document.getElementById('menu-area')
 const checklistArea = document.getElementById('checklist-area')
@@ -88,9 +86,6 @@ function addItem() {
     itemInput.value = ''
 }
 
-// Event listener for the "Add" button
-addItemBtn.addEventListener('click', addItem);
-
 // Event listener for 'Enter' key press in the input field
 itemInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -113,9 +108,6 @@ backToMenuBtn.addEventListener('click', function(event){
 });
 
 // Menu Section
-
-// Event listener for the "Checklist Add" button
-addChecklistBtn.addEventListener('click', addMenuItem);
 
 // Event listener for 'Enter' key press in the input field
 menuTextInput.addEventListener('keypress', (e) => {
