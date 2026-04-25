@@ -1,6 +1,9 @@
-const cacheName = "siteAssets"
+importScripts("/checklist/db.js")
+
+const cacheName = "siteAssetsV2"
 const assets = [
   "/checklist",
+  "/checklist/db.js",
   "/checklist/script.js",
   "/checklist/style.css",
   "/checklist/icon.svg"
@@ -24,8 +27,15 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request.then(cacheResponse => {
+  event.respondWith(caches.match(event.request).then(cacheResponse => {
     return cacheResponse || fetch(event.request)
-  })));
+  }));
 });
 
+self.addEventListener('message', function(event) {
+  console.log(event)
+  function save(store) {
+    store.put(event.data)
+  }
+  openAndProcessDBFunc(save)
+});
