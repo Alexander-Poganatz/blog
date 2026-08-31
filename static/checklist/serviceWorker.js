@@ -1,26 +1,30 @@
 importScripts("/checklist/db.js")
 
-const cacheName = "siteAssetsV2"
+const cacheName = "siteAssetsV3"
 const assets = [
   "/checklist",
   "/checklist/db.js",
   "/checklist/script.js",
   "/checklist/style.css",
-  "/checklist/icon.svg"
+  "/checklist/icon.svg",
+  "/checklist/manifest.json"
 ]
 
+
 self.addEventListener('install', function(event) {
+  self.skipWaiting()
   event.waitUntil(
     caches.open(cacheName).then(cache => {
-      cache.addAll(assets)
+      return cache.addAll(assets)
     })
   )
 });
 
 self.addEventListener('activate', function(event) {
+  console.log("activated")
   event.waitUntil(
     caches.keys().then(keys => {
-      return Promise.all(keys.filter(k => k !== cachename)
+      return Promise.all(keys.filter(k => k !== cacheName)
         .map(key => caches.delete(key)))
     })
   )
@@ -33,7 +37,6 @@ self.addEventListener('fetch', function(event) {
 });
 
 self.addEventListener('message', function(event) {
-  console.log(event)
   function save(store) {
     store.put(event.data)
   }
