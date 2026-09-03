@@ -1,8 +1,9 @@
 importScripts("/checklist/db.js")
 
-const cacheName = "siteAssetsV3"
+const cacheName = "siteAssetsV4"
 const assets = [
   "/checklist",
+  "/checklist/",
   "/checklist/db.js",
   "/checklist/script.js",
   "/checklist/style.css",
@@ -21,7 +22,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
-  console.log("activated")
+  event.waitUntil(clients.claim())
   event.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(keys.filter(k => k !== cacheName)
