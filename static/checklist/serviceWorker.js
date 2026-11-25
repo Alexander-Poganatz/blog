@@ -1,9 +1,9 @@
 importScripts("/checklist/db.js")
 
-const cacheName = "siteAssetsV4"
+const cacheName = "siteAssetsV5"
 const assets = [
-  "/checklist",
   "/checklist/",
+  "/checklist/index.html",
   "/checklist/db.js",
   "/checklist/script.js",
   "/checklist/style.css",

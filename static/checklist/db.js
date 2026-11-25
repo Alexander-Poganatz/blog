@@ -3,7 +3,7 @@
 * Func is expected to except the checklist store.
 */
 function openAndProcessDBFunc(func) {
-    const request = window.indexedDB.open("ChecklistDB", 1);
+    const request = globalThis.indexedDB.open("ChecklistDB", 1);
     const checklistStoreName = "checklist"
     request.onerror = function errorHandler(error) {
         console.error(error)
