@@ -6,7 +6,8 @@
     { "src": "/checklist/icon.svg", "type": "image/svg+xml", "sizes": "32x32" },
     { "src": "/checklist/icon.svg", "type": "image/svg+xml", "sizes": "512x512" }
   ],
-  "start_url": "/checklist",
+  "start_url": "/checklist/",
+  "scope": "/checklist/",
   "display": "standalone",
   "theme_color": "black",
   "background_color": "gray"

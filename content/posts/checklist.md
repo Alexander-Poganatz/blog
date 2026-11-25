@@ -18,7 +18,7 @@ I was checking out Gemma 4 E2B on my computer and I decided to vibe a little bit
 I added a menu of checklists and offline functionality. The tiny model was a bit too confused about getting a menu of
 checklists when there was already checklist.
 
-[Checklist App](/checklist)
+[Checklist App](/checklist/)
 
 ### Usage notes
 * Press enter to add items
